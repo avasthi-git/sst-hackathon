@@ -1,27 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>HTML Minifier/Unminifier</title>
-</head>
-<body>
-    <header>
-        <h1>HTML Minifier/Unminifier</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Minify HTML</h2>
-            <textarea id="minify-input"></textarea>
-            <button id="minify-button">Minify</button>
-        </section>
-        <section>
-            <h2>Unminify HTML</h2>
-            <textarea id="unminify-input"></textarea>
-            <button id="unminify-button">Unminify</button>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <title>Minify Your HTML</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <meta name="description" content="Minify Your HTML &amp; Boost Performance" />
+        <meta property="og:site_name" content="Minify Your HTML" />
+        <meta property="og:title" content="Minify Your HTML" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Minify Your HTML &amp; Boost Performance" />
+        <meta property="og:image" content="./assets/card.jpg"
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:url" content="https://go.ishanavasthi.in/html-minifier" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://go.ishanavasthi.in/html-minifier" />
+        <link href="https://fonts.googleapis.com/css2?display=swap&family=Sora:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,300;1,300" rel="stylesheet" type="text/css" />
+        <link href="./style.min.css" rel="stylesheet" type="text/css" />
+        <script src="./script.min.js"></script>
+        <link rel="icon" href="./assets/favicon.png">
+        <noscript>
+            <style>
+                body {
+                    overflow: auto !important;
+                }
+                body:after {
+                    display: none !important;
+                }
+                #main > .inner {
+                    opacity: 1 !important;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body class="is-loading">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
+            <symbol id="icon-6ee79a7585f3f3c012d0dfdbadcd1366" viewBox="0 0 40 40">
+                <path
+                    d="M37.7,14l-11.4-1.7L21.1,2c-0.3-0.6-0.7-0.9-1.1-0.9S19.2,1.4,18.9,2l-5.1,10.4L2.3,14c-0.8,0.1-1.3,0.5-1.3,1 c0,0.3,0.2,0.7,0.6,1.1l8.3,8.1L8,35.6c0,0.2,0,0.4,0,0.5c0,0.3,0.1,0.6,0.2,0.8c0.2,0.2,0.4,0.3,0.7,0.3c0.3,0,0.6-0.1,0.9-0.3 L20,31.5l10.2,5.4c0.3,0.2,0.6,0.3,0.9,0.3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.2-0.5,0.2-0.8c0-0.2,0-0.3,0-0.5l-2-11.4l8.3-8.1 c0.4-0.4,0.6-0.8,0.6-1.1C38.9,14.5,38.5,14.2,37.7,14z"
+                />
+            </symbol>
+            <symbol id="icon-ecbd7520f72820fb3c1bfce19d8ed9ce" viewBox="0 0 40 40">
+                <path d="M5.2,14.6l1.5-1.5c0.2-0.2,0.5-0.2,0.7,0l12.4,12.4l12.4-12.4c0.2-0.2,0.5-0.2,0.7,0l1.6,1.6c0.2,0.2,0.2,0.5,0,0.7L19.8,30 L5.2,15.4C5,15.2,5,14.8,5.2,14.6z" />
+            </symbol>
+            <symbol id="icon-67ad41ecc66a1b1cd00d0d3b20c00017" viewBox="0 0 40 40">
+                <path
+                    d="M34.1,19.9c0,0.3-0.1,0.3-0.1,0.4L21.3,33.1c-0.1,0.1-0.1,0.1-0.4,0.1c-0.3,0-0.3-0.1-0.4-0.1L19,31.6 c-0.1-0.1-0.1-0.1-0.1-0.4s0.1-0.3,0.1-0.4l9.2-9.2H5.8c-0.1,0-0.2,0-0.2,0c0,0,0,0,0,0c-0.1-0.1-0.1-0.2-0.1-0.4v-2.5 c0-0.2,0.1-0.4,0.1-0.5c0,0,0.1,0,0.2,0h22.4L19,9c-0.1-0.1-0.1-0.1-0.1-0.4c0-0.3,0.1-0.3,0.1-0.4l1.5-1.5c0.1-0.1,0.1-0.1,0.4-0.1 c0.3,0,0.3,0.1,0.4,0.1L34,19.5C34,19.6,34.1,19.6,34.1,19.9z"
+                />
+            </symbol>
+            <symbol id="icon-021973a1bb185878b41e1ef48ed6bbaa" viewBox="0 0 40 40">
+                <path
+                    d="M35.7,13c-1.6-2-3.8-3.5-6.5-4.7c-2.8-1.1-5.8-1.7-9-1.7c-2.4,0-4.8,0.3-7,1C10.9,8.2,9,9.2,7.4,10.3 c-1.6,1.2-2.9,2.5-3.8,4.1c-1,1.6-1.4,3.3-1.4,5c0,2,0.6,3.9,1.8,5.7c1.2,1.8,2.9,3.2,5,4.4c-0.1,0.5-0.3,1-0.5,1.5 c-0.2,0.5-0.4,0.9-0.5,1.2c-0.2,0.3-0.4,0.7-0.7,1c-0.3,0.4-0.5,0.6-0.6,0.8c-0.1,0.2-0.4,0.4-0.7,0.8c-0.3,0.4-0.5,0.6-0.6,0.7 c0,0-0.1,0.1-0.2,0.2C5,35.8,5,35.8,5,35.8L4.8,36c-0.1,0.1-0.1,0.2-0.1,0.2c0,0,0,0.1,0,0.2c0,0.1,0,0.2,0,0.2v0 c0.1,0.2,0.2,0.4,0.4,0.6c0.2,0.1,0.4,0.2,0.6,0.2C6.6,37.3,7.3,37.2,8,37c3.5-0.9,6.6-2.5,9.2-4.9c1,0.1,2,0.2,2.9,0.2 c3.3,0,6.3-0.6,9-1.7c2.8-1.1,4.9-2.7,6.5-4.7c1.6-2,2.4-4.1,2.4-6.5C38.1,17.1,37.3,14.9,35.7,13z"
+                />
+            </symbol>
+        </svg>
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <div id="container03" class="container default">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <div id="image02" class="image">
+                                    <span class="frame"><img src="./assets/image02.png" alt="" /></span>
+                                </div>
+                                <h1 id="text28" class="style3">Minify HTML</h1>
+                                <p id="text03" class="style1">
+                                    Introducing the ultimate file minification platform for HTML files! Unleash the true power of your website by compressing the code and enhancing load speeds like never before.
+                                </p>
+                                <ul id="buttons03" class="style2 buttons">
+                                    <li>
+                                        <a href="https://go.ishanavasthi.in/html-minifier" class="button n01">
+                                            <svg><use xlink:href="#icon-6ee79a7585f3f3c012d0dfdbadcd1366"></use></svg><span class="label">Get Started</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul id="buttons01" class="style2 buttons">
+                                    <li>
+                                        <a href="#start" class="button n01">
+                                            <svg><use xlink:href="#icon-ecbd7520f72820fb3c1bfce19d8ed9ce"></use></svg><span class="label">Learn More</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container01" data-scroll-id="start" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="3" data-scroll-invisible="1" class="container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <div>
+                                    <div id="image03" class="style1 image">
+                                        <span class="frame"><img src="./assets/image03.svg" alt="" /></span>
+                                    </div>
+                                    <h3 id="text01" class="style2">Improved loading speed:</h3>
+                                    <p id="text02" class="style1">
+                                        Smaller HTML files take less time to download and parse by browsers, which can lead to faster loading times for your website. This is especially important for mobile users, who often have slower
+                                        internet connections.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div id="image04" class="style1 image">
+                                        <span class="frame"><img src="./assets/image04.svg" alt="" /></span>
+                                    </div>
+                                    <h3 id="text04" class="style2">Better SEO:</h3>
+                                    <p id="text05" class="style1">
+                                        Google and other search engines take website speed into account when ranking pages in search results. Minifying your HTML can help your website rank higher in search results, which can lead to more
+                                        traffic.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container04" class="container default">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <div id="image01" class="style1 image">
+                                    <span class="frame"><img src="./assets/bandwidth.png" alt="" /></span>
+                                </div>
+                                <h3 id="text17" class="style2">Reduced bandwidth usage:</h3>
+                                <p id="text22" class="style1">Smaller HTML files also use less bandwidth, which can save you money on hosting costs. This is especially important if you have a high-traffic website.</p>
+                                <ul id="buttons07" class="style2 buttons">
+                                    <li>
+                                        <a href="https://go.ishanavasthi.in/html-minifier" class="button n01">
+                                            <svg><use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use></svg><span class="label">See it in action!</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="divider01" class="style1 full screen" />
+                    <div id="container02" class="container default">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <h3 id="text24" class="style2">Pricing</h3>
+                                <h1 id="text16" class="style4">$0</h1>
+                                <p id="text11" class="style1">Try it now for free!</p>
+                                <ul id="buttons04" class="style1 buttons">
+                                    <li>
+                                        <a href="https://go.ishanavasthi.in/html-minifier" class="button n01">
+                                            <svg><use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use></svg><span class="label">Try it now</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="divider02" class="style1 full screen" />
+                    <div id="container06" class="style1 container default">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <h2 id="text08" class="style3">Ready for Faster Web Performance?</h2>
+                                <p id="text09" class="style1">Have a question? Chat with us today!</p>
+                                <ul id="buttons02" class="style2 buttons">
+                                    <li>
+                                        <a href="https://ishanavasthi.in/#socials" class="button n01">
+                                            <svg><use xlink:href="#icon-021973a1bb185878b41e1ef48ed6bbaa"></use></svg><span class="label">Get in touch</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="divider03" class="style1 full screen" />
+                    <div id="container07" class="container default">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <p id="text23" class="style6">© 2023 Minify Your HTML - All Rights Reserved - Made with ❤️ by <a href="https://ishanavasthi.in?utm_source=footer">Ishan Avasthi</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
